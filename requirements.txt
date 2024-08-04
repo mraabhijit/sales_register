@@ -1,0 +1,15 @@
+fastapi
+psycopg2-binary
+SQLAlchemy
+uvicorn
+pytest
+jinja2
+pytest-asyncio
+alembic
+bcrypt
+cryptography
+python-jose
+python-multipart
+passlib
+httpx
+aiofiles

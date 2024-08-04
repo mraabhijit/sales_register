@@ -1,0 +1,28 @@
+<mxfile host="65bd71144e">
+    <diagram id="kj_mwdguW5HihoLvyOkN" name="Database Schema">
+        <mxGraphModel dx="1301" dy="613" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="2" value="Users" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;fontSize=20;" vertex="1" parent="1">
+                    <mxGeometry x="100" y="150" width="120" height="150" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" value="Sales" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;fontSize=20;" vertex="1" parent="1">
+                    <mxGeometry x="560" y="150" width="120" height="150" as="geometry"/>
+                </mxCell>
+                <mxCell id="4" value="user_id (PK)&lt;br&gt;Business Name&lt;br&gt;Phone Number&lt;br&gt;Email&lt;br&gt;Password_hash" style="rounded=0;whiteSpace=wrap;html=1;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;fontSize=20;" vertex="1" parent="1">
+                    <mxGeometry x="80" y="320" width="150" height="150" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" value="Address" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;fontSize=20;" vertex="1" parent="1">
+                    <mxGeometry x="340" y="150" width="120" height="150" as="geometry"/>
+                </mxCell>
+                <mxCell id="6" value="user_id(FK, Users)&lt;br&gt;Address 1&lt;br&gt;Address 2&lt;br&gt;Pin code&lt;br&gt;City&lt;br&gt;State (Enum)&lt;br&gt;Alternate Phone Number" style="rounded=0;whiteSpace=wrap;html=1;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;fontSize=20;" vertex="1" parent="1">
+                    <mxGeometry x="320" y="320" width="150" height="240" as="geometry"/>
+                </mxCell>
+                <mxCell id="7" value="user_id (FK, Users)&lt;br&gt;sale_id (PK)&lt;br&gt;amount&lt;br&gt;cash_amount&lt;br&gt;upi_amount&lt;br&gt;date&lt;br&gt;time&lt;br&gt;comments&lt;br&gt;paid_to&lt;br&gt;upi_ref_#" style="rounded=0;whiteSpace=wrap;html=1;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;fontSize=20;" vertex="1" parent="1">
+                    <mxGeometry x="550" y="320" width="150" height="280" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
