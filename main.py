@@ -3,6 +3,7 @@ import utils.models as models
 from utils.database import engine
 from sqlalchemy.orm import Session
 from utils.utils import get_db
+from routers import auth
 
 
 app = FastAPI()
@@ -18,3 +19,6 @@ async def home(db: Session = Depends(get_db)):
         print(f"Fetched records: \n{records}")
     except Exception as e:
         print("Unable to fetch query")
+
+
+app.include_router(auth.router)
