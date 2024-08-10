@@ -12,7 +12,7 @@ class Users(Base):
     business_name = Column(String, nullable=False)
     phone_number = Column(String, nullable=False)
     email = Column(String, nullable=False)
-    password_hash = Column(String, nullable=False)
+    hashed_password = Column(String, nullable=False)
 
 
 class UserAddress(Base):
