@@ -187,13 +187,13 @@ async def login_for_access_token(response: Response,
 #     )
 
 
-@router.post('/register',) #response_class=HTMLResponse)
+@router.post('/register') 
 async def register_user(request:Request,
-                        email: str = Form(), 
-                        business_name: str = Form(),
-                        phone_number: str = Form(),
-                        password: str = Form(),
-                        password2: str = Form(),
+                        email: str, 
+                        business_name: str,
+                        phone_number: str,
+                        password: str,
+                        password2: str,
                         db: Session = Depends(get_db)
                         ):
     try:
