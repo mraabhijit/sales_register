@@ -3,7 +3,7 @@ import utils.models as models
 from utils.database import engine
 from sqlalchemy.orm import Session
 from utils.utils import get_db
-from routers import auth
+from routers import auth, address
 
 
 app = FastAPI()
@@ -22,3 +22,4 @@ async def home(db: Session = Depends(get_db)):
 
 
 app.include_router(auth.router)
+app.include_router(address.router)

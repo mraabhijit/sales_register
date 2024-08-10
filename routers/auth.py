@@ -114,12 +114,12 @@ async def get_current_user(request: Request, SECRET_KEY: str = SECRET_KEY, ALGOR
 async def login_for_access_token(response: Response,
                                 form_data: OAuth2PasswordRequestForm = Depends(),
                                  db: Session = Depends(get_db)):
-    user = authenticate_user(form_data.phone_number, form_data.password, db)
+    user = authenticate_user(form_data.username, form_data.password, db)
     if not user:
         return False
     token_expires = timedelta(minutes=60)
     token = create_access_token(user.phone_number,
-                                user.id,
+                                user.user_id,
                                 expires_delta=token_expires)
     
     response.set_cookie(key="access_token", 
@@ -223,5 +223,3 @@ async def register_user(request:Request,
 
     except Exception as e:
         print(f"Error occurred: {e}")
-        msg = "Internal Server Error"
-        return {"request": request, "msg": msg}
