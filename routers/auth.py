@@ -207,11 +207,7 @@ async def register_user(request:Request,
 
         if password != password2 or validation1 is not None or validation2 is not None:
             msg = "Invalid Registration Request"
-            # return templates.TemplateResponse(
-            #     "register.html",
-            return {"request": request, 
-                "msg": msg}
-            # )
+            return msg
         
         user_model = models.Users()
         user_model.email = email
@@ -222,15 +218,10 @@ async def register_user(request:Request,
         db.add(user_model)
         db.commit()
 
-
         msg = "User Successfully Created"
-        # return templates.TemplateResponse(
-        #     "login.html",
-        return {"request": request, 
-            "msg": msg}
-        # )
+        return msg
+
     except Exception as e:
-        # Log the error for debugging
         print(f"Error occurred: {e}")
         msg = "Internal Server Error"
         return {"request": request, "msg": msg}
